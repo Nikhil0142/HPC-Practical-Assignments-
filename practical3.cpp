@@ -14,7 +14,7 @@ int main() {
     int min_val = INT_MAX;
     int max_val = INT_MIN;
 
-    
+    #pragma omp parallel for reduction(+:sum)
     for (int i = 0; i < n; i++) {
         sum += arr[i];
     }
